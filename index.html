@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusRead Digital Library</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 1. Navigation Bar -->
+    <header class="navbar-header">
+        <nav class="navbar container">
+            <div class="logo">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <span>CampusRead</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#catalog">Book Catalog</a></li>
+                <li><a href="#resources">Free Resources</a></li>
+                <li><a href="#creator">Creator</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Open Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- 2. Hero Banner -->
+        <section id="home" class="hero-section">
+            <div class="hero-content container">
+                <h1>Welcome to CampusRead Digital Library</h1>
+                <p>Your ultimate gateway to textbooks, study guides, and academic resources—anytime, anywhere.</p>
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="Search by book title, author, or category...">
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. About Section -->
+        <section id="about" class="about-section container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Empowering Student Success</h2>
+                    <p>CampusRead Digital Library is designed to bridge the gap between students and essential academic literature. Whether you are preparing for exams, conducting research, or exploring new subjects, our platform provides quick, organized access to high-quality textbooks and study materials.</p>
+                    <ul class="about-features">
+                        <li><i class="fa-solid fa-check-circle"></i> 24/7 Digital Accessibility</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Curated Academic & Technical Resources</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Seamless Real-time Book Search</li>
+                    </ul>
+                </div>
+                <div class="about-card-banner">
+                    <div class="stat-box">
+                        <i class="fa-solid fa-book"></i>
+                        <h3>10,000+</h3>
+                        <p>Available Materials</p>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fa-solid fa-users"></i>
+                        <h3>5,000+</h3>
+                        <p>Active Students</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Creator Section -->
+        <section id="creator" class="creator-section container">
+            <div class="creator-card">
+              <div class="creator-avatar-container">
+                <img src="https://share.google/c1Kff6ItUelDeBPwZ"alt="Creator Profile Picture" class="creator-img">
+</dev>
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <div class="creator-info">
+                    <h2>About the Creator</h2>
+                    <p class="creator-name">Developed by: ROY SALOTE VILLASENCIO</p>
+                    <p>A passionate INFORMATION TEACHNOLOGY student and web developer dedicated to building accessible digital tools that enhance student learning and academic resource sharing.</p>
+                    <div class="creator-socials">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Interactive Book Catalog -->
+        <section id="catalog" class="catalog-section container">
+            <div class="section-title">
+                <h2>Interactive Book Catalog</h2>
+                <p>Explore our curated sample collection across various academic disciplines.</p>
+            </div>
+            <div class="catalog-grid" id="bookCatalogGrid">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+            <div id="noResults" class="no-results hidden">
+                <i class="fa-solid fa-face-frown"></i>
+                <p>No books found matching your search criteria.</p>
+            </div>
+        </section>
+
+        <!-- 5. Book Resources & Free Libraries Section -->
+        <section id="resources" class="resources-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Where to Read & Download</h2>
+                    <p>Access trusted external open-access libraries and digital repositories.</p>
+                </div>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+                        <h3>Project Gutenberg</h3>
+                        <p>A massive digital library offering over 60,000 free classic literature and public domain e-books.</p>
+                        <a href="https://www.gutenberg.org" target="_blank" rel="noopener noreferrer" class="btn-outline">Visit Library <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon"><i class="fa-solid fa-landmark"></i></div>
+                        <h3>Open Library</h3>
+                        <p>An open, editable library catalog building a web page for every book ever published, with borrowable textbooks.</p>
+                        <a href="https://openlibrary.org" target="_blank" rel="noopener noreferrer" class="btn-outline">Visit Library <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h3>DOAB (Directory of Open Access Books)</h3>
+                        <p>Provides open access to peer-reviewed academic books across various scientific and humanities disciplines.</p>
+                        <a href="https://www.doabooks.org" target="_blank" rel="noopener noreferrer" class="btn-outline">Visit Library <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                        <h3>Google Scholar</h3>
+                        <p>A freely accessible web search engine that indexes the full text or metadata of scholarly literature and research papers.</p>
+                        <a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" class="btn-outline">Visit Library <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Book Request / Contact Form -->
+        <section id="contact" class="contact-section container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Book Request & Support</h2>
+                    <p>Can't find a specific book or have a question for our librarians? Send us a request and we will look into acquiring or locating it for you.</p>
+                    <div class="contact-details">
+                        <p><i class="fa-solid fa-envelope"></i> library@campusread.edu</p>
+                        <p><i class="fa-solid fa-phone"></i> +1 (555) 839-2041</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Student Union Building, Room 204</p>
+                    </div>
+                </div>
+                <form id="requestForm" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Jane Doe" required>
+                        <small class="error-msg" id="nameError">Please enter your name.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Student Email</label>
+                        <input type="email" id="email" placeholder="jane.doe@university.edu" required>
+                        <small class="error-msg" id="emailError">Please enter a valid email address.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="requestType">Inquiry Type</label>
+                        <select id="requestType" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="book">Suggest a New Book Title</option>
+                            <option value="question">Librarian Assistance / Question</option>
+                        </select>
+                        <small class="error-msg" id="typeError">Please select an inquiry type.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Details / Book Title & Author</label>
+                        <textarea id="message" rows="4" placeholder="Provide title, author, edition, or your question here..." required></textarea>
+                        <small class="error-msg" id="msgError">Please provide message details.</small>
+                    </div>
+                    <button type="submit" class="btn-primary">Submit Request</button>
+                    <div id="formSuccess" class="form-success hidden">
+                        <i class="fa-solid fa-circle-check"></i> Thank you! Your request has been successfully submitted.
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- 7. Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="logo">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                    <span>CampusRead</span>
+                </div>
+                <p>Empowering students and researchers with open-access digital knowledge and textbooks.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#catalog">Book Catalog</a></li>
+                    <li><a href="#resources">Free Resources</a></li>
+                    <li><a href="#creator">Creator</a></li>
+                    <li><a href="#contact">Contact & Requests</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Library
